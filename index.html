@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="canonical" href="https://html5-templates.com/" />
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="system/js/desktop.js"></script>
+	<script src="system/js/taskbar.js"></script>
+	<script src="system/js/flags.js"></script>	
+	<script src="system/js/screensaver.js"></script>					
+	<link rel="stylesheet" type="text/css" href="system/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="system/css/themes/default.css" />
+	<title>Codename Aero</title>
+</head>
+<body onload="startupFunctions()">
+	<div id="desktop">
+		<div class="window closed" data-html="true" data-title="Paint" taskicon="<img src='system/img/icons/paint.png' class='taskpanelimg' width='32' height='32'>" headicon="<img src='system/img/icons/paint.png' class='winheadimg' width='26' height='26'>">
+			<iframe src="apps/jspaint/index.html"></iframe>
+		</div>
+		<div class="window closed" data-html="true" data-title="Notepad" taskicon="<img src='system/img/icons/notepad.png' class='taskpanelimg' width='32' height='32'>">			
+			<iframe src="apps/notepad/index.html"></iframe>
+		</div>
+		<div class="window closed" data-html="true" data-title="Calendar" taskicon="<img src='system/img/icons/calendar.png' class='taskpanelimg' width='32' height='32'>">			
+			<iframe src="apps/calendar/index.html"></iframe>
+		</div>
+		<div class="window closed" data-html="true" data-title="Calculator" taskicon="<img src='system/img/icons/calculator.png' class='taskpanelimg' width='32' height='32'>">
+			<iframe src="apps/calc/index.html"></iframe>
+		</div>
+		<div class="window closed" data-html="true" data-title="VMBox" taskicon="<img src='system/img/icons/VMBox.png' class='taskpanelimg' width='32' height='32'>">			
+			<iframe src="apps/vmbox/index.html"></iframe>
+		</div>
+		<div class="window closed" data-html="true" data-title="Minesweeper" taskicon="<img src='system/img/icons/minesweeper.png' class='taskpanelimg' width='32' height='32'>">			
+			<iframe src="apps/minesweeper/index.html"></iframe>
+		</div>
+		
+		<div id="taskbar">
+			<div id="appsBtn" onclick="appstoggle()"><img src="system/img/systemlogo.png" width="36" height="36"></div>
+			<div class="timedate">
+			<div class="timedatetext"></div>
+			</div>		
+		</div>
+	
+
+		<div id="appsmenu">
+			<h1 class="appsHtxt">Apps</h1>
+				<div id="appicons">
+					<center>
+						<li><a class="openWindow" data-id="0"><img border="0" alt="" src="system/img/icons/paint.png" width="32" height="32"><br>Paint</a></li>
+						<li><a class="openWindow" data-id="1"><img border="0" alt="" src="system/img/icons/notepad.png" width="32" height="32"><br>Notepad</a></li>
+						<li><a class="openWindow" data-id="2"><img border="0" alt="" src="system/img/icons/calendar.png" width="32" height="32"><br>Calendar</a></li>
+						<li><a class="openWindow" data-id="3"><img border="0" alt="" src="system/img/icons/calculator.png" width="32" height="32"><br>Calculator</a></li>
+						<li><a class="openWindow" data-id="4"><img border="0" alt="" src="system/img/icons/vmbox.png" width="32" height="32"><br>VMBox</a></li>
+						<li><a class="openWindow" data-id="5"><img border="0" alt="" src="system/img/icons/minesweeper.png" width="32" height="32"><br>Minesweeper</a></li>
+					</center>		
+				</div>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<hr>
+				<input type="text" id="appSearch" onkeyup="appSearch()" placeholder="Press here to search for an app" title="Press here to search for an app">
+		</div>
+		<!-- You can use this template freely if you leave a visible link to HTML5-Templates.com -->
+		<a id="watermark">Luna's Codename Aero<br>Development build compiled on</a>
+	</div>
+</body>
+
+</html>

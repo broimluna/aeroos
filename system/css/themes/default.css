@@ -1,0 +1,251 @@
+a, p, h1, li {
+    color: white;
+}
+
+::placeholder {
+    color: white;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: transparent;
+}
+::-webkit-scrollbar
+{
+	width: 6px;
+    height: 6px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+
+
+iframe {
+    height: 100%;
+    width: 100%;
+}
+#desktop {
+    background: url("https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=en-CA");
+    background-size: cover !important;
+}
+#taskbar {
+    backdrop-filter: blur(5px);
+    background: url(../../img/glass.png);
+    background-size: cover !important;    
+    height: 40px;
+    z-index: 1010;
+    border-top: 2px solid rgba(0, 0, 0, 0.200);
+}
+.windowHeader {
+    background: transparent;
+    border-bottom: 2px solid transparent;
+}
+.activeWindow .windowHeader {
+    background-color: transparent;
+}
+.windowHeader > strong {
+    display: inline-flex;
+}
+.winheadimg {
+    margin: 1px 3px;
+}
+.wincontent {
+    border: 2px solid transparent;
+    padding: 0;
+}
+.window {
+    backdrop-filter: blur(5px);
+    background: url(../../img/glass.png);
+    background-size: cover !important;
+}
+.taskbarPanel {
+    display: inline-flex;
+    border: 2px solid transparent;
+    background: transparent;
+    font-size: 17px;
+    padding: 2px 3px;
+    margin: 0px 0 0 0px;
+    line-height: 16px;
+    transform: scale(0.9);
+    transition: 0.5s;
+}
+.taskbarPanel.activeTab {
+    background: rgba(0, 0, 0, 0.300);
+    transform: scale(1);
+}
+.taskbarPanel.minimizedTab {
+    background: transparent;
+}
+.taskbarPanel:hover, .taskbarPanel.minimizedTab:hover {
+    background: rgba(0, 0, 0, 0.150);
+    transition: 0.5s;
+    border-radius: 4px;
+}
+#appsBtn {
+    display: inline-block;
+    border: transparent;
+    position: relative;
+    font-size: 15px;
+    padding: 0px 5px;
+    background: transparent;
+    font-weight: bold;
+    cursor: pointer;
+    transform: scale(1.12);
+    height: 0px;
+    transition: 0.5s;
+    border-radius: 4px;
+}
+#appsBtn img {
+    transition: 0.5s;
+    margin:0px 0px;
+}
+#appsBtn img:hover {
+background: rgba(0, 0, 0, 0.5);
+transition: 0.5s;
+border-radius: 4px;
+}
+
+.timedatetext {
+    position: relative;
+    top: calc(0% + 4px);
+    color: white;
+    font-family: Segoe UI;
+    text-align: right;
+    font-size: 15px;
+    transition: 0.2s;
+}
+.timedate {
+    background: transparent !important;
+    padding: 8px 0.1% 9px 2px !important;
+    position: absolute;
+    display: inline-block;
+    height: fit-content;
+    width: fit-content;
+    top: -2px;
+    border-radius: 4px;
+    border-bottom-right-radius: 0px;
+    height: calc(0% + 21px);
+    /* width: calc(0% + 134px) !important; */
+    right: 0;
+    outline: none !important;
+    border: 2px solid transparent;
+    transition: 0.2s;
+}
+.timedate.dark {
+    filter: invert(1);
+}
+#appsmenu {
+    position: fixed;
+    width: 260px;
+    height: 0px;
+    left: 0;
+    right: 0;
+    bottom: 42px;
+    z-index: 2000;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 0.5s;
+    background: url(../../img/glass.png);
+    background-size: auto;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-top-right-radius: 16px;
+}
+
+#appsmenu.dark {
+    background: #2929299f;
+}
+
+#appsmenu.opened {
+    height: 390px; 
+}
+
+#appicons {
+	background:transparent;
+	border:solid 1px transparent;
+	margin: 7px 0 7px 7px;
+	height: 69%;
+	overflow-y: hidden;
+	float:left;
+	display:block;
+	padding:0;
+	list-style:none;
+	transition: 0.2s;
+}
+#appicons a {
+    border: solid 1px transparent;
+    display: block; 
+    padding:3px; 
+    margin:3px;
+    text-decoration: none; 
+    min-width:220px;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.2s;
+}
+#appicons.dark {
+    color: white !important;
+}
+#appicons a:hover {
+	-moz-border-radius:3px; 
+    -webkit-border-radius:3px;
+    background: #ffffff7a;
+    border: 1px solid white;
+    transition: 0.1s;
+}
+#appicons a.dark:hover {
+    background: #0000007a;
+    border: 1px solid black;
+}
+#appicons a img {
+    border:0; 
+    vertical-align:middle; 
+    margin:0 5px 0 0;
+}
+#appicons a br {
+    display: none;
+}
+.appsHtxt {
+    font-family: Segoe UI;
+    text-align: center;
+    margin: 12px 0px;
+}
+#appSearch {
+    background: transparent;
+    padding: 6% 12%;
+    margin: 0px 0px;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    width: 85%;
+    line-height: 14px;
+    overflow-x: scroll;
+    left: 0;
+    border-radius: 0px;
+    border-color: transparent;
+    outline: none;
+    /* padding: 9px 4px 9px 4px; */
+    background-image: url("../../img/icons/tbSearchW.png");
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    color: white;
+}
+#watermark {
+    position: absolute;
+    display: inline-block;
+    bottom: 50px;
+    right: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+}
