@@ -4,10 +4,10 @@
 	<meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 	<link rel="canonical" href="https://html5-templates.com/" />
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 	<script src="system/js/desktop.js"></script>
 	<script src="system/js/taskbar.js"></script>
 	<script src="system/js/flags.js"></script>	
@@ -21,20 +21,65 @@
 		<div class="window closed" data-html="true" data-title="Paint" taskicon="<img src='system/img/icons/paint.png' class='taskpanelimg' width='32' height='32'>" headicon="<img src='system/img/icons/paint.png' class='winheadimg' width='26' height='26'>">
 			<iframe src="apps/jspaint/index.html"></iframe>
 		</div>
-		<div class="window closed" data-html="true" data-title="Notepad" taskicon="<img src='system/img/icons/notepad.png' class='taskpanelimg' width='32' height='32'>">			
+		<div class="window closed" data-html="true" data-title="Notepad" taskicon="<img src='system/img/icons/notepad.png' class='taskpanelimg' width='32' height='32'>" headicon="<img src='system/img/icons/notepad.png' class='winheadimg' width='26' height='26'>">			
 			<iframe src="apps/notepad/index.html"></iframe>
 		</div>
-		<div class="window closed" data-html="true" data-title="Calendar" taskicon="<img src='system/img/icons/calendar.png' class='taskpanelimg' width='32' height='32'>">			
+		<div class="window closed" data-html="true" data-title="Calendar" taskicon="<img src='system/img/icons/calendar.png' class='taskpanelimg' width='32' height='32'>" headicon="<img src='system/img/icons/calendar.png' class='winheadimg' width='26' height='26'>">		
 			<iframe src="apps/calendar/index.html"></iframe>
 		</div>
-		<div class="window closed" data-html="true" data-title="Calculator" taskicon="<img src='system/img/icons/calculator.png' class='taskpanelimg' width='32' height='32'>">
+		<div class="window closed" data-html="true" data-title="Calculator" taskicon="<img src='system/img/icons/calculator.png' class='taskpanelimg' width='32' height='32'>" headicon="<img src='system/img/icons/calculator.png' class='winheadimg' width='26' height='26'>">
 			<iframe src="apps/calc/index.html"></iframe>
 		</div>
-		<div class="window closed" data-html="true" data-title="VMBox" taskicon="<img src='system/img/icons/VMBox.png' class='taskpanelimg' width='32' height='32'>">			
-			<iframe src="apps/vmbox/index.html"></iframe>
+		<div class="window closed" data-html="true" data-title="VMBox" taskicon="<img src='system/img/icons/VMBox.png' class='taskpanelimg' width='32' height='32'>" headicon="<img src='system/img/icons/vmbox.png' class='winheadimg' width='26' height='26'>">
+			<a href="apps/VMBox/index.html" target="vbox">Home</a>
+			<iframe src="apps/vmbox/index.html" name="vbox"></iframe>
 		</div>
-		<div class="window closed" data-html="true" data-title="Minesweeper" taskicon="<img src='system/img/icons/minesweeper.png' class='taskpanelimg' width='32' height='32'>">			
+		<div class="window closed" data-html="true" data-title="Minesweeper" taskicon="<img src='system/img/icons/minesweeper.png' class='taskpanelimg' width='32' height='32'>" headicon="<img src='system/img/icons/minesweeper.png' class='winheadimg' width='26' height='26'>">			
 			<iframe src="apps/minesweeper/index.html"></iframe>
+		</div>
+		<div class="window closed" data-html="true" data-title="Media Player" taskicon="<img src='system/img/icons/mediaplayer.png' class='taskpanelimg' width='32' height='32'>" headicon="<img src='system/img/icons/mediaplayer.png' class='winheadimg' width='26' height='26'>">
+			<link rel="stylesheet" type="text/css" href="apps/mediaplayer/mediaplayer.css" />
+			<script src="apps/mediaplayer/mediaplayer.js"></script>			
+			<div class="wplist">
+				<ul style="list-style: none">
+				<li style="margin-left: 20px !important; margin-top: 10px !important; line-height: 135%;">
+				<ul id="list">
+			
+			
+			<div id="pages">
+			<div id="mpBACK" class="mydivshow">
+			<h1>Select a Category:</h1>
+			 <button id="mpNETR" class="catsel">Internet Radio</button>
+			 <br>
+			 <br>
+			 <button id="mpCURL" class="catsel">Custom URL</button>
+			</div>        
+			
+			<div id="mpNETR" class="mydivhide" style="display:none;">
+			<h1>Internet Radio:</h1>
+			<li><button onclick="cs_change_music('https://s2.radio.co/s2b2b68744/listen');">BadRadio</button></li>
+			<br> 
+			<li><button onclick="cs_change_music('https://streamer.radio.co/sd7b28e5f3/listen');">Mambo Radio</button></li>
+			<br> 
+			<li><button onclick="cs_change_music('https://radio.plaza.one/ogg');">Nightwave Plaza</button></li>
+			<br><button id="mpBACK" class="catsel">Back</button><br><br>
+			<strong>&copy; 2022 BadRadio, Mambo Radio, Nightwave Plaza, This music is streamed live.</strong>
+			 <br><br>
+			</div>
+			<div id="mpCURL" class="mydivhide" style="display:none;">
+			<h1>Custom URL:</h1>
+			<input name="musicURL" type="text" maxlength="512" id="musicURL" class="textinput"/><button id="playbtn" class="search" onclick="cs_change_music(musicURL.value);">Play!</button>
+			<br><button id="mpBACK" class="catsel">Back</button><br><br>
+			<br><br>
+			</div>
+			
+			</div>   
+			
+			</ul>
+			</li>
+			</ul>
+			</div>
+			<audio style="width:100%;height:28px;bottom:0;position:absolute;" id="my-audio" controls loop></audio>		
 		</div>
 		
 		<div id="taskbar">
@@ -55,6 +100,8 @@
 						<li><a class="openWindow" data-id="3"><img border="0" alt="" src="system/img/icons/calculator.png" width="32" height="32"><br>Calculator</a></li>
 						<li><a class="openWindow" data-id="4"><img border="0" alt="" src="system/img/icons/vmbox.png" width="32" height="32"><br>VMBox</a></li>
 						<li><a class="openWindow" data-id="5"><img border="0" alt="" src="system/img/icons/minesweeper.png" width="32" height="32"><br>Minesweeper</a></li>
+						<li><a class="openWindow" data-id="6"><img border="0" alt="" src="system/img/icons/mediaplayer.png" width="32" height="32"><br>Media Player</a></li>
+
 					</center>		
 				</div>
 				<br>
@@ -81,5 +128,11 @@
 		<a id="watermark">Luna's Codename Aero<br>Development build compiled on</a>
 	</div>
 </body>
-
+<script>
+	$(".catsel").click(function() {
+    var id = $(this).attr("id");
+    $("#pages div").css("display", "none");
+    $("#pages div#" + id + "").css("display", "block");
+});
+</script>
 </html>

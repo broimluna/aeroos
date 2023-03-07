@@ -1,0 +1,21 @@
+.wplist {
+    margin-right: 100px; 
+    width: 100%; 
+    height: calc(100% - 60px); 
+    font-size: 11px; 
+    overflow-y: scroll; 
+    overflow-x: hidden; 
+    background: transparent;
+    }
+   
+    .catsel, #pages li {
+       cursor: pointer;
+    }
+   
+    li::marker {
+      content: ''; 
+   }
+
+#playbtn {
+      margin: 0px 0px 15px 5px;
+}

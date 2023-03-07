@@ -1,5 +1,6 @@
-a, p, h1, li {
+a, p, h1, li, input {
     color: white;
+    font-family: Segoe UI;
 }
 
 ::placeholder {
@@ -26,6 +27,11 @@ a, p, h1, li {
 	background-color: #555;
 }
 
+@font-face {
+    font-family: Segoe UI;
+    src: url(../../fonts/segoeuisl.ttf);
+}
+
 
 
 iframe {
@@ -33,7 +39,7 @@ iframe {
     width: 100%;
 }
 #desktop {
-    background: url("https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=en-CA");
+    background: url("../../img/bg.png");
     background-size: cover !important;
 }
 #taskbar {
@@ -174,7 +180,7 @@ border-radius: 4px;
 	border:solid 1px transparent;
 	margin: 7px 0 7px 7px;
 	height: 69%;
-	overflow-y: hidden;
+	overflow-y: scroll;
 	float:left;
 	display:block;
 	padding:0;
@@ -249,3 +255,58 @@ border-radius: 4px;
     font-size: 15px;
     color: white;
 }
+
+/*window app sizes*/
+.window {	top: 20px;	left: 240px;}
+
+#window0 .wincontent {	width: 660px; height: 400px;	}
+#window1 .wincontent {	width: 500px; height: 300px;	}
+#window2 .wincontent {	width: 426px; height: 514px;	}
+#window3 .wincontent {	width: 308px; height: 252px;	}
+#window4 .wincontent {	width: 830px; height: 635px;	}
+#window5 .wincontent {	width: 286px; height: 356px;	}
+
+
+#window4 > .wincontent iframe {
+    height: calc(100% - 20px);
+    border-radius: 5px;
+}
+#window0 > .wincontent {
+    min-width: 660px;
+    min-height: 400px;
+}
+#window1 > .wincontent {
+    min-width: 500px;
+    min-height: 300px;
+}
+#window2 > .wincontent {
+    min-width: 426px;
+    min-height: 514px;
+}
+#window3 > .wincontent {
+    min-width: 308px;
+    min-height: 252px;
+}
+#window4 > .wincontent {
+    min-width: 830px;
+    min-height: 635px;
+}
+#window5 > .wincontent {
+    min-width: 286px;
+    min-height: 356px;
+}
+#window6 .wincontent {
+    min-width: 464px;
+    min-height: 280px;
+
+    }
+
+
+
+button, input {
+    border-radius: 5px;
+    background: url("../../img/glass.png");
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(0, 0, 0, 0.200);
+}
+

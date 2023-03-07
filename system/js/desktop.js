@@ -96,7 +96,7 @@ $(document).ready(function(){
 	$("#window" + (i-1)).addClass('activeWindow');
 	
 	$( ".wincontent" ).resizable();			// resizable
-	$( ".window" ).draggable({ cancel: ".wincontent", iFrameFix: true });	// draggable
+	$( ".window" ).draggable({ cancel: ".wincontent", iframeFix: true});	// draggable
 	
 
     $(".window").mousedown(function(){		// active window on top (z-index 1000)
