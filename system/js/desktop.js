@@ -5,15 +5,20 @@ windowTopPos = new Array,
 windowLeftPos = new Array,
 panel,
 id;
-function test() {
+function watermarkstamp() {
 	let nLastModif = document.lastModified;
 	var watermark = document.getElementById("watermark")
-	watermark.innerText = "Luna's Codename Aero\nDevelopment build compiled on\n" + nLastModif;
+	watermark.innerText = "Luna's aeroOS\nPreview Build compiled on\n" + nLastModif;
 	}
+
+	window.addEventListener('load', function () {
+		$("#startup").fadeOut();
+})
+
 //Startup Functions 
 function startupFunctions() {
 	startDate();
-	test();
+	watermarkstamp();
 }
 
 
@@ -42,8 +47,7 @@ function minimizeWindow(id){
 	windowLeftPos[id] = $("#window" + id).css("left");
 	
 	$("#window" + id).animate({
-		top: 800,
-		left: 0
+		opacity: 0
 	}, 200, function() {		//animation complete
 		$("#window" + id).addClass('minimizedWindow');
 		$("#minimPanel" + id).addClass('minimizedTab');
@@ -53,16 +57,28 @@ function minimizeWindow(id){
 
 function openWindow(id) {
 	if ($('#window' + id).hasClass("minimizedWindow")) {
+		$("#window" + id).animate({
+			opacity: 1
+		}, 200, function() {
 		openMinimized(id);
-	} else {	
+		})
+	} else {
+		$("#window" + id).animate({
+			opacity: 1
+		}, 1, function() {	
 		makeWindowActive(id);
 		$("#window" + id).removeClass("closed");
 		$("#minimPanel" + id).removeClass("closed");
+		});
 	}
 }
 function closeWindwow(id) {
+	$("#window" + id).animate({
+		opacity: 0
+	}, 200, function() {
 	$("#window" + id).addClass("closed");
 	$("#minimPanel" + id).addClass("closed");
+	});
 }
 
 function openMinimized(id) {
@@ -72,7 +88,8 @@ function openMinimized(id) {
 		
 	$('#window' + id).animate({
 		top: windowTopPos[id],
-		left: windowLeftPos[id]
+		left: windowLeftPos[id],
+		opacity: 1
 	}, 200, function() {
 	});				
 }
@@ -127,6 +144,7 @@ $(document).ready(function(){
     $(".openWindow").click(function(){		// open closed window
 		openWindow($(this).attr("data-id"));
     });
+
 	
     $(".winmaximize").click(function(){
 		if ($(this).parent().parent().hasClass('fullSizeWindow')) {			// minimize

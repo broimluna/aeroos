@@ -374,9 +374,8 @@ body > .window-titlebar {
 	color: var(--GrayText);
 }
 .menus *, .menu-popup * {
-	font-family: 'Segoe UI', sans-serif;
 	font-size: 12px;
-        border-radius: 15px;
+	border-radius: 15px;
 }
 .menu-container {
 	margin-bottom: 1px;

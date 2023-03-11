@@ -14,12 +14,12 @@
 	<script src="system/js/screensaver.js"></script>					
 	<link rel="stylesheet" type="text/css" href="system/css/style.css" />
 	<link rel="stylesheet" type="text/css" href="system/css/themes/default.css" />
-	<title>Codename Aero</title>
+	<title>aeroOS</title>
 </head>
 <body onload="startupFunctions()">
 	<div id="desktop">
 		<div class="window closed" data-html="true" data-title="Paint" taskicon="<img src='system/img/icons/paint.png' class='taskpanelimg' width='32' height='32'>" headicon="<img src='system/img/icons/paint.png' class='winheadimg' width='26' height='26'>">
-			<iframe src="apps/jspaint/index.html"></iframe>
+			<iframe height="100%" width="100%" src="apps/jspaint/index.html"></iframe>
 		</div>
 		<div class="window closed" data-html="true" data-title="Notepad" taskicon="<img src='system/img/icons/notepad.png' class='taskpanelimg' width='32' height='32'>" headicon="<img src='system/img/icons/notepad.png' class='winheadimg' width='26' height='26'>">			
 			<iframe src="apps/notepad/index.html"></iframe>
@@ -81,6 +81,7 @@
 			</div>
 			<audio style="width:100%;height:28px;bottom:0;position:absolute;" id="my-audio" controls loop></audio>		
 		</div>
+
 		
 		<div id="taskbar">
 			<div id="appsBtn" onclick="appstoggle()"><img src="system/img/systemlogo.png" width="36" height="36"></div>
@@ -127,6 +128,10 @@
 		<!-- You can use this template freely if you leave a visible link to HTML5-Templates.com -->
 		<a id="watermark">Luna's Codename Aero<br>Development build compiled on</a>
 	</div>
+<div id="startup">
+	<div><img id="startuplogo" src="system/img/systemlogo.png"></div>
+	<div><img id="startupload" src="system/img/startupload.gif"></div>	
+</div>
 </body>
 <script>
 	$(".catsel").click(function() {
@@ -134,5 +139,6 @@
     $("#pages div").css("display", "none");
     $("#pages div#" + id + "").css("display", "block");
 });
+
 </script>
 </html>

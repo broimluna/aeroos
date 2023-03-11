@@ -1,6 +1,6 @@
-a, p, h1, li, input {
+a, p, h1, h2, h3, li, div, input, strong, button, textarea, .menus {
     color: white;
-    font-family: Segoe UI;
+    font-family: Segoe UI !important;
 }
 
 ::placeholder {
@@ -32,11 +32,37 @@ a, p, h1, li, input {
     src: url(../../fonts/segoeuisl.ttf);
 }
 
+#startuplogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 200px;
+    position: relative;
+  }
+  #startupload {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 400px;
+    position: relative;
+  }
 
+  #startup {
+    position: fixed;
+    display: block; 
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+}
 
 iframe {
     height: 100%;
     width: 100%;
+    backdrop-filter: blur(0.00001px);
 }
 #desktop {
     background: url("../../img/bg.png");
@@ -48,7 +74,12 @@ iframe {
     background-size: cover !important;    
     height: 40px;
     z-index: 1010;
-    border-top: 2px solid rgba(0, 0, 0, 0.200);
+    border: 2px solid rgba(0, 0, 0, 0.200);
+    border-bottom: 0px solid transparent;
+    width: 99.5%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: 0 auto;
 }
 .windowHeader {
     background: transparent;
@@ -59,6 +90,16 @@ iframe {
 }
 .windowHeader > strong {
     display: inline-flex;
+}
+.windowHeader > span {
+    border: 2px solid transparent;
+    bottom: 2px;
+    left: 3px;
+    color: black;
+}
+.windowHeader > span.winclose:hover {
+	background: rgba(255,255,255,0.3);
+    
 }
 .winheadimg {
     margin: 1px 3px;
@@ -71,6 +112,17 @@ iframe {
     backdrop-filter: blur(5px);
     background: url(../../img/glass.png);
     background-size: cover !important;
+}
+
+.window.fullSizeWindow {
+    border: 2px solid transparent;
+    bottom: 0px !important;
+    backdrop-filter: blur(5px);
+}
+.fullSizeWindow {
+    display: block;
+    height: 100% !important;
+    width: 100% !important;
 }
 .taskbarPanel {
     display: inline-flex;
@@ -152,19 +204,20 @@ border-radius: 4px;
     position: fixed;
     width: 260px;
     height: 0px;
-    left: 0;
+    left: 4px;
     right: 0;
-    bottom: 42px;
+    opacity: 0;
+    bottom: 48px;
     z-index: 2000;
     overflow-x: hidden;
     overflow-y: hidden;
+    border: 2px solid transparent;
     transition: 0.5s;
     background: url(../../img/glass.png);
     background-size: auto;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border-top-right-radius: 16px;
+    border-radius: 16px;
 }
 
 #appsmenu.dark {
@@ -173,9 +226,11 @@ border-radius: 4px;
 
 #appsmenu.opened {
     height: 390px; 
+    border: 2px solid rgba(0, 0, 0, 0.200);
+    opacity: 1;
 }
 
-#appicons {
+#appicons, #tasksicons {
 	background:transparent;
 	border:solid 1px transparent;
 	margin: 7px 0 7px 7px;
@@ -187,7 +242,7 @@ border-radius: 4px;
 	list-style:none;
 	transition: 0.2s;
 }
-#appicons a {
+#appicons a, #tasksicons a {
     border: solid 1px transparent;
     display: block; 
     padding:3px; 
@@ -201,7 +256,7 @@ border-radius: 4px;
 #appicons.dark {
     color: white !important;
 }
-#appicons a:hover {
+#appicons a:hover, #tasksicons a:hover {
 	-moz-border-radius:3px; 
     -webkit-border-radius:3px;
     background: #ffffff7a;
@@ -212,12 +267,12 @@ border-radius: 4px;
     background: #0000007a;
     border: 1px solid black;
 }
-#appicons a img {
+#appicons a img, #tasksicons a img {
     border:0; 
     vertical-align:middle; 
     margin:0 5px 0 0;
 }
-#appicons a br {
+#appicons a br, #tasksicons a br {
     display: none;
 }
 .appsHtxt {
@@ -299,7 +354,13 @@ border-radius: 4px;
     min-width: 464px;
     min-height: 280px;
 
-    }
+}
+#window7 > .wincontent > #tasksicons {
+    height: 78%;
+}
+#window7 > .wincontent > h2 {
+text-align: center;
+}
 
 
 

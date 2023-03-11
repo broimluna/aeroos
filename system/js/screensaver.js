@@ -22,7 +22,8 @@
   z-index: 100000;
   color: #eee;
   cursor: none !important;
-  background-color: /*#202020*/ #000;
+  background-color: /*#202020*/ transparent;
+  backdrop-filter: blur(5px);
 	transition: 0.2s;
 }
 #${id} div {
@@ -34,10 +35,10 @@
   line-height: 1;
 }
 #${id} > div {
-  animation: x${id} 15s linear infinite alternate;
+  animation: bigger${id} 15s linear infinite alternate, x${id} 15s linear infinite alternate;
 }
 #${id} > div > div {
-  animation: y${id} 12s linear infinite alternate;
+  animation: smaller${id} 12s linear infinite alternate, y${id} 12s linear infinite alternate;
 }
 @keyframes x${id} {
   100% {
@@ -49,6 +50,37 @@
   100% {
     transform: translateY(calc(100vh - ${height}px));
   }
+}
+
+@keyframes bigger${id} {
+  25% {
+    transform: scale(1.15);
+  }
+  50% {
+    transform: scale(1.30);
+  }
+  75% {
+    transform: scale(1.45);
+  }
+  100% {
+    transform: scale(1.60);
+  }
+}
+
+@keyframes smaller${id} {
+  100% {
+    transform: scale(1.60);
+  }
+  75% {
+    transform: scale(1.45);
+  }
+  50% {
+    transform: scale(1.30);
+  }
+  25% {
+    transform: scale(1.15);
+  }
+
 }
 `;
       let timeoutId = null;
