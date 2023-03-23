@@ -1,2 +1,2 @@
-# newwebdesktop
-New Web Desktop in Dev, codenamed Aero.
+# aeroOS
+The inbetween release between AvalancheOS and Codename Toronto
