@@ -8,7 +8,7 @@ id;
 function watermarkstamp() {
 	let nLastModif = document.lastModified;
 	var watermark = document.getElementById("watermark")
-	watermark.innerText = "Luna's aeroOS\nPreview Build compiled on\n" + nLastModif;
+	watermark.innerText = "Luna's aeroOS\nBuild compiled on\n" + nLastModif;
 	}
 
 	window.addEventListener('load', function () {
@@ -20,6 +20,51 @@ function startupFunctions() {
 	startDate();
 	watermarkstamp();
 }
+
+//right click menu huh
+document.oncontextmenu = rightClick;
+  
+  function rightClick(clickEvent) {
+	  clickEvent.preventDefault();
+	  // return false;
+  }
+  document.onclick = hideMenu;
+  document.oncontextmenu = rightClick;
+	
+  function hideMenu() {
+	  document.getElementById("contextMenu")
+			  .style.display = "none"
+  }
+
+  function rightClick(e) {
+	  e.preventDefault();
+
+	  if (document.getElementById("contextMenu")
+			  .style.display == "block")
+		  hideMenu();
+	  else{
+		  var menu = document.getElementById("contextMenu")
+
+		  menu.style.display = 'block';
+		  menu.style.left = e.pageX + "px";
+		  menu.style.top = e.pageY + "px";
+	  }
+  }
+
+  function activatefull(ele) {
+	if (ele.requestFullscreen) {
+		ele.requestFullscreen();
+	}
+}
+
+// Function for full screen activation
+function deactivatefull() {
+	if (document.exitFullscreen) {
+		document.exitFullscreen();
+	}
+}
+
+
 
 
 //

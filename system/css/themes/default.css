@@ -3,6 +3,13 @@ a, p, h1, h2, h3, li, div, input, strong, button, textarea, .menus {
     font-family: Segoe UI !important;
 }
 
+button, input {
+    border-radius: 5px;
+    background: url("../../img/glass.png");
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(0, 0, 0, 0.200);
+}
+
 ::placeholder {
     color: white;
 }
@@ -76,7 +83,6 @@ iframe {
     z-index: 1010;
     border: 2px solid rgba(0, 0, 0, 0.200);
     border-bottom: 0px solid transparent;
-    width: 99.5%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     margin: 0 auto;
@@ -107,11 +113,14 @@ iframe {
 .wincontent {
     border: 2px solid transparent;
     padding: 0;
+    backdrop-filter: blur(0.00001px);
 }
 .window {
     backdrop-filter: blur(5px);
-    background: url(../../img/glass.png);
-    background-size: cover !important;
+    background-image: url(../../img/glass.png);
+    background-color: transparent;
+    background-size: cover;
+    
 }
 
 .window.fullSizeWindow {
@@ -204,10 +213,10 @@ border-radius: 4px;
     position: fixed;
     width: 260px;
     height: 0px;
-    left: 4px;
     right: 0;
+    left: 0;
     opacity: 0;
-    bottom: 48px;
+    bottom: 40px;
     z-index: 2000;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -217,7 +226,7 @@ border-radius: 4px;
     background-size: auto;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border-radius: 16px;
+    border-top-right-radius: 16px;
 }
 
 #appsmenu.dark {
@@ -301,9 +310,53 @@ border-radius: 4px;
     background-position: 10px center;
     color: white;
 }
+
+.context-menu {
+    position: absolute;
+    text-align: center;
+    background: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.200);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: 0.2s;
+}
+.context-menu.dark {
+    background: #29292960;
+}
+
+.context-menu ul {
+    padding: 0px;
+    margin: 0px;
+    min-width: 150px;
+    list-style: none;
+}
+
+.context-menu ul li {
+    border-radius: 16px;
+    background: transparent;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    border: 1px solid transparent;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.context-menu ul li.dark {
+    color: white;
+}
+
+
+.context-menu ul li:hover {
+    background: #00000024;
+    border: 1px solid white;
+}
+
+
 #watermark {
     position: absolute;
-    display: inline-block;
+    display: none;
     bottom: 50px;
     right: 10px;
     font-weight: bold;
@@ -353,21 +406,21 @@ border-radius: 4px;
 #window6 .wincontent {
     min-width: 464px;
     min-height: 280px;
+    max-width: 464px;
+    max-height: 280px;
 
 }
-#window7 > .wincontent > #tasksicons {
-    height: 78%;
+#window6.fullSizeWindow .wincontent {
+    min-width: unset !important;
+    min-height: unset !important;
+    max-width: unset !important;
+    max-height: unset !important;  
+
 }
-#window7 > .wincontent > h2 {
-text-align: center;
+#window7 > .wincontent {
+    min-width: 286px;
+    min-height: 356px;
 }
 
 
-
-button, input {
-    border-radius: 5px;
-    background: url("../../img/glass.png");
-    backdrop-filter: blur(5px);
-    border: 2px solid rgba(0, 0, 0, 0.200);
-}
 

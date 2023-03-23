@@ -102,7 +102,6 @@
 						<li><a class="openWindow" data-id="4"><img border="0" alt="" src="system/img/icons/vmbox.png" width="32" height="32"><br>VMBox</a></li>
 						<li><a class="openWindow" data-id="5"><img border="0" alt="" src="system/img/icons/minesweeper.png" width="32" height="32"><br>Minesweeper</a></li>
 						<li><a class="openWindow" data-id="6"><img border="0" alt="" src="system/img/icons/mediaplayer.png" width="32" height="32"><br>Media Player</a></li>
-
 					</center>		
 				</div>
 				<br>
@@ -127,11 +126,23 @@
 		</div>
 		<!-- You can use this template freely if you leave a visible link to HTML5-Templates.com -->
 		<a id="watermark">Luna's Codename Aero<br>Development build compiled on</a>
+
+		<div id="contextMenu" class="context-menu" style="display: none; left: 140px; top: 421px;">
+			<ul>
+				<li onclick="window.location.reload(true);">Reload aeroOS</li>
+				<li onclick="activatefull(document.documentElement);">Activate Fullscreen</li>
+				<li onclick="deactivatefull();">Deactivate Fullscreen</li>
+				
+
+			</ul>
+			</div>
+
 	</div>
 <div id="startup">
 	<div><img id="startuplogo" src="system/img/systemlogo.png"></div>
 	<div><img id="startupload" src="system/img/startupload.gif"></div>	
 </div>
+
 </body>
 <script>
 	$(".catsel").click(function() {
